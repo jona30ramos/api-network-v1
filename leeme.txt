@@ -1,0 +1,21 @@
+1-Create enviroment
+python -m venv env-v1
+
+2-To Active
+source env-v1/bin/activate
+
+3-Install Dependencies
+pip install -r requirements.txt
+
+
+-Desactive
+desactive
+
+-Install
+pip install pipreqs
+
+-Generar requirements.txt:
+Ve al directorio raíz de tu proyecto y ejecuta:
+pipreqs . --force
+
+La opción --force asegura que se sobrescriba el archivo requirements.txt existente.

@@ -1,0 +1,23 @@
+service: api-network-v1
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: ca-central-1
+
+functions:
+  app:
+    handler: handler.lambda_handler
+    events:
+      - http:
+          path: account
+          method: post
+          cors: true
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
